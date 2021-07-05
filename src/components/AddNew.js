@@ -13,10 +13,6 @@ export default class AddNew extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleInputFileChange = (e: any) => {
-    this.setFile(e.target.files[0]);
-  };
-
   handleSubmit = async () => {  
     const response = await axios
       .post("https://ironrest.herokuapp.com/labfunctions", this.state)
@@ -33,7 +29,6 @@ export default class AddNew extends Component {
       tagline: "",
       language: "",
       link: "",
-      file: "",
     });
   };
   render() {
@@ -67,15 +62,7 @@ export default class AddNew extends Component {
           value={this.state.link}
           onChange={this.handleChange}
         />
-        <TextInput
-          id="files"
-          type="file"
-          name="files"
-          value={this.state.files}
-          onChange={this.handleInputFileChange}
-          multiple
-        />
-        <button onClick={this.handleSubmit} className="mt-5 btn btn-primary">
+           <button onClick={this.handleSubmit} className="mt-5 btn btn-primary">
           Submit
         </button>
       </div>
