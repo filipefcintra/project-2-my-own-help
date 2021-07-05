@@ -38,7 +38,7 @@ class Search extends Component {
           <input
             type="text"
             className="form-control"
-            placeholder="Digite para buscar um país"
+            placeholder="Digite o que você precisa"
             onChange={this.handleChange}
             value={this.state.searchTerm}
           />
