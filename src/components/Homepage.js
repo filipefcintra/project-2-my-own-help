@@ -1,14 +1,15 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 function Homepage() {
   return (
     <div>
-      <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+      <nav className="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+          <Link className="navbar-brand" href="#">
             MyOwnHelp
-          </a>
+          </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavDropdown"
@@ -16,28 +17,23 @@ function Homepage() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+          <div className="collapse navbar-collapse " id="navbarNavDropdown">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link" href="#">
                   Add New
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <Link className="nav-link" href="#">
                   Search
-                </a>
+                </Link>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
+              <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
                   href="#"
                   id="navbarDropdownMenuLink"
                   role="button"
@@ -45,25 +41,25 @@ function Homepage() {
                   aria-expanded="false"
                 >
                   Subjects
-                </a>
+                </Link>
                 <ul
-                  class="dropdown-menu"
+                  className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Classes
-                    </a>
+                    <Link className="dropdown-item" href="#">
+                      classees
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link className="dropdown-item" href="#">
                       Labs
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link className="dropdown-item" href="#">
                       Videos
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -73,192 +69,192 @@ function Homepage() {
       </nav>
       <br></br>
       <br></br>
-      <div class="container">
-        <div class="row justify-content-start">
+      <div className="container">
+        <div className="row justify-content-start">
           <Link
-            class="col-4"
+            className="col-4"
             style={{
               backgroundColor: "orange",
               color: "inherit",
               textDecoration: "inherit",
             }}
           >
-            <div background-color="black" class="container-sm">
+            <div background-color="black" className="container-sm">
               Javascript
             </div>
           </Link>
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
             <div>HTML</div>
           </Link>
         </div>
         <br></br>
-        <div class="row justify-content-center">
+        <div className="row justify-content-center">
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">CSS</div>
+            <div className="col-4">CSS</div>
           </Link>
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">Node</div>
-          </Link>
-        </div>
-        <br></br>
-        <div class="row justify-content-end">
-          <Link
-            class="col-4"
-            style={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            <div class="col-4">React</div>
-          </Link>
-          <Link
-            class="col-4"
-            style={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            <div class="col-4">Python</div>
+            <div className="col-4">Node</div>
           </Link>
         </div>
         <br></br>
-        <div class="row justify-content-around">
+        <div className="row justify-content-end">
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">Java</div>
+            <div className="col-4">React</div>
           </Link>
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">C#</div>
-          </Link>
-        </div>
-        <br></br>
-        <div class="row justify-content-between">
-          <Link
-            class="col-4"
-            style={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            <div class="col-4">C++</div>
-          </Link>
-          <Link
-            class="col-4"
-            style={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            <div class="col-4">PHP</div>
+            <div className="col-4">Python</div>
           </Link>
         </div>
         <br></br>
-        <div class="row justify-content-evenly">
+        <div className="row justify-content-around">
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">.Net</div>
+            <div className="col-4">Java</div>
           </Link>
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">UX/UI</div>
+            <div className="col-4">C#</div>
+          </Link>
+        </div>
+        <br></br>
+        <div className="row justify-content-between">
+          <Link
+            className="col-4"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <div className="col-4">C++</div>
+          </Link>
+          <Link
+            className="col-4"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <div className="col-4">PHP</div>
+          </Link>
+        </div>
+        <br></br>
+        <div className="row justify-content-evenly">
+          <Link
+            className="col-4"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <div className="col-4">.Net</div>
+          </Link>
+          <Link
+            className="col-4"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <div className="col-4">UX/UI</div>
           </Link>
         </div>
       </div>
       <br></br>
-      <div class="container">
-        <div class="row justify-content-start">
+      <div className="container">
+        <div className="row justify-content-start">
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">Ruby</div>
+            <div className="col-4">Ruby</div>
           </Link>
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">ASP</div>
-          </Link>
-        </div>
-        <br></br>
-        <div class="row justify-content-center">
-          <Link
-            class="col-4"
-            style={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            <div class="col-4">R</div>
-          </Link>
-          <Link
-            class="col-4"
-            style={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            <div class="col-4">Pascal</div>
+            <div className="col-4">ASP</div>
           </Link>
         </div>
         <br></br>
-        <div class="row justify-content-evenly">
+        <div className="row justify-content-center">
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">Visual Basic</div>
+            <div className="col-4">R</div>
           </Link>
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">Lua</div>
-          </Link>
-        </div>
-        <br></br>
-        <div class="row justify-content-center">
-          <Link
-            class="col-4"
-            style={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            <div class="col-4">Github</div>
-          </Link>
-          <Link
-            class="col-4"
-            style={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            <div class="col-4">C#</div>
+            <div className="col-4">Pascal</div>
           </Link>
         </div>
         <br></br>
-        <div class="row justify-content-start">
+        <div className="row justify-content-evenly">
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">MongoDB</div>
+            <div className="col-4">Visual Basic</div>
           </Link>
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">SQL</div>
+            <div className="col-4">Lua</div>
           </Link>
         </div>
         <br></br>
-        <div class="row justify-content-center">
+        <div className="row justify-content-center">
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">Swift</div>
+            <div className="col-4">Github</div>
           </Link>
           <Link
-            class="col-4"
+            className="col-4"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <div class="col-4">Perl</div>
+            <div className="col-4">C#</div>
+          </Link>
+        </div>
+        <br></br>
+        <div className="row justify-content-start">
+          <Link
+            className="col-4"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <div className="col-4">MongoDB</div>
+          </Link>
+          <Link
+            className="col-4"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <div className="col-4">SQL</div>
+          </Link>
+        </div>
+        <br></br>
+        <div className="row justify-content-center">
+          <Link
+            className="col-4"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <div className="col-4">Swift</div>
+          </Link>
+          <Link
+            className="col-4"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <div className="col-4">Perl</div>
           </Link>
         </div>
       </div>
