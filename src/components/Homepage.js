@@ -4,62 +4,13 @@ import NavDropdown from "./NavDropdown";
 function Homepage() {
   return (
     <div>
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav">
-              <Link to={`/`} style={{ textDecoration: "none" }}>
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
-                    Home
-                  </a>
-                </li>
-              </Link>
-              <Link to={`/add-new`} style={{ textDecoration: "none" }}>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Add New
-                  </a>
-                </li>
-              </Link>
-              <Link to={`/add-new`} style={{ textDecoration: "none" }}>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Search
-                  </a>
-                </li>
-              </Link>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Subjects
-                </a>
-                <ul
-                  className="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  {/* <NavDropdown /> */}
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <br></br>
-      <br></br>
       <div className="container">
         <div className="row justify-content-start">
           <Link
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -69,7 +20,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -82,7 +33,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -92,7 +43,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -105,7 +56,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -115,7 +66,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -128,7 +79,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -138,7 +89,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -151,7 +102,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -161,7 +112,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -174,7 +125,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -184,7 +135,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -199,7 +150,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -209,7 +160,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -222,7 +173,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -232,7 +183,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -245,7 +196,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -255,7 +206,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -268,7 +219,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -278,7 +229,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -291,7 +242,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -301,7 +252,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -314,7 +265,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
@@ -324,7 +275,7 @@ function Homepage() {
             className="col-4"
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "black",
               textDecoration: "inherit",
             }}
           >

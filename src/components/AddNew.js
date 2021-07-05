@@ -10,15 +10,10 @@ export default class AddNew extends Component {
     subjects: [],
     language: "",
     link: "",
-    files: "",
   };
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
-  };
-
-  handleInputFileChange = (e: any) => {
-    this.setFile(e.target.files[0]);
   };
 
   handleSubmit = async () => {
@@ -73,14 +68,6 @@ export default class AddNew extends Component {
           name="subjects"
           value={this.state.subjects}
           onChange={this.handleChange}
-        />
-        <TextInput
-          label="Files"
-          type="file"
-          name="files"
-          value={this.state.files}
-          onChange={this.handleInputFileChange}
-          multiple
         />
         <button onClick={this.handleSubmit} className="mt-5 btn btn-primary">
           Submit
