@@ -18,12 +18,11 @@ function NewForm(props) {
       <div className="form-group">
         <label htmlFor="newFormTagline">Tagline</label>
         <input
-          type="text"
-          className="form-control"
-          id="NewFormTagline"
-          name="tagline"
-          onChange={props.handleChange}
-          value={props.state.tagline}
+          type="file"
+          name="files"
+          id="files"
+          onChange={props.handleInputFileChange}
+          multiple
         />
       </div>
       <div className="form-group">

@@ -3,13 +3,13 @@ import {Link} from "react-router-dom";
 
 export default function Navbar() {
   return (
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <Link class="navbar-brand" href='./Homepage'>
+<nav className="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <Link className="navbar-brand" to='./'>
       MyOwnHelp
     </Link>
     <button
-      class="navbar-toggler"
+      className="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNavDropdown"
@@ -17,24 +17,24 @@ export default function Navbar() {
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <Link class="nav-link" href="./AddNew">
+    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <Link className="nav-link" to="./AddNew">
             Add New
           </Link>
         </li>
-        <li class="nav-item">
-          <Link class="nav-link" href="#">
+        <li className="nav-item">
+          <Link className="nav-link" to="./Search">
             Search
           </Link>
         </li>
-        <li class="nav-item dropdown">
+        <li className="nav-item dropdown">
           <Link
-            class="nav-link dropdown-toggle"
-            href="#"
+            className="nav-link dropdown-toggle"
+            to="#"
             id="navbarDropdownMenuLink"
             role="button"
             data-bs-toggle="dropdown"
@@ -42,19 +42,19 @@ export default function Navbar() {
           >
             Subjects
           </Link>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li>
-              <Link class="dropdown-item" href="#">
-                Classes
+              <Link className="dropdown-item" to="#">
+                classNamees
               </Link>
             </li>
             <li>
-              <Link class="dropdown-item" href="#">
+              <Link className="dropdown-item" to="#">
                 Labs
               </Link>
             </li>
             <li>
-              <Link class="dropdown-item" href="#">
+              <Link className="dropdown-item" to="#">
                 Videos
               </Link>
             </li>
