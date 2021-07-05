@@ -1,12 +1,10 @@
 import { Component } from "react";
 import axios from "axios";
-
 class Search extends Component {
   state = {
     searchTerm: "",
     searchResults: [],
   };
-
   componentDidUpdate = (prevProps, prevState) => {
     if (prevState.searchTerm !== this.state.searchTerm) {
       this.handleSubmit();
@@ -30,7 +28,6 @@ class Search extends Component {
       console.log(err);
     }
   };
-
   render() {
     return (
       <div>
@@ -76,5 +73,4 @@ class Search extends Component {
     );
   }
 }
-
 export default Search;

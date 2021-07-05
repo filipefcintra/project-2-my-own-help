@@ -8,8 +8,8 @@ function Homepage() {
           <Link
             className="col-4"
             style={{
-              backgroundColor: "orange",
-              color: "inherit",
+              fontWeight: "bold",
+              color: "black",
               textDecoration: "inherit",
             }}
           >
