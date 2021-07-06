@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import TextInput from "./TextInput";
-import { Dropdown } from "bootstrap";
 
 export default class AddNew extends Component {
   state = {
@@ -49,11 +48,11 @@ export default class AddNew extends Component {
           onChange={this.handleChange}
         />
         <TextInput
-          label="Language"
+          label="Select Language"
           type="text"
           name="language"
+          options={this.state.language}
           value={this.state.language}
-          onChange={this.handleChange}
         />
         <TextInput
           label="Link"

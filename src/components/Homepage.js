@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavDropdown from "./NavDropdown";
 
 function Homepage() {
@@ -6,7 +6,7 @@ function Homepage() {
     <div>
       <div className="container">
         <div className="row justify-content-start">
-          <Link
+          {/* <Link
             className="col-4"
             style={{
               fontWeight: "bold",
@@ -280,7 +280,7 @@ function Homepage() {
             }}
           >
             <div className="col-4">Perl</div>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

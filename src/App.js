@@ -13,7 +13,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar />
-        <Route exact path="/" component={Homepage} />
+        <Route exact path="" component={Homepage} />
         <Route path="/addnew" component={AddNew} />
         <Route path="/search" component={Search} />
         {/* Tem que fazer a rota subjects ir para a funcao escolhida */}
