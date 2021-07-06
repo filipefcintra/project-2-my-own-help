@@ -28,7 +28,7 @@ function Homepage() {
         <div className="row justify-content-center">
           <Link
             className="col-4"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: "inherit", textDecoration: "inherit"}}
           >
             <div className="col-4">CSS</div>
           </Link>
