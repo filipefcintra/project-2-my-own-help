@@ -1,8 +1,8 @@
 import axios from "axios";
-import { Dropdown } from "bootstrap";
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
-class NavDropdown extends Component {
+class NavDrop extends Component {
   state = {
     programming: [],
   };
@@ -31,12 +31,12 @@ class NavDropdown extends Component {
         {this.state.programming.map((program) => {
           return (
             <li>
-              <a
-                className="dropdown-item"
+              <Link
+                className="drop-item"
                 to={`/subject/` + program.programming}
               >
                 {program.programming}
-              </a>
+              </Link>
             </li>
           );
         })}
@@ -45,4 +45,4 @@ class NavDropdown extends Component {
   }
 }
 
-export default NavDropdown;
+export default NavDrop;

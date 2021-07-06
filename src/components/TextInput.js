@@ -1,8 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-=======
-
->>>>>>> ae296e0224e6ff49ae3154d054efc169364de636
 export default function TextInput(props) {
   return (
     <div>

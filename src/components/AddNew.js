@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import TextInput from "./TextInput";
-// import { Dropdown } from "bootstrap";
 export default class AddNew extends Component {
   state = {
     name: "",
@@ -14,7 +13,7 @@ export default class AddNew extends Component {
   };
 
   handleSubmit = async () => {  
-    const response = await axios
+    await axios
       .post("https://ironrest.herokuapp.com/labfunctions", this.state)
       .then((response) => {
         console.log(response);
