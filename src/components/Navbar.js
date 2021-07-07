@@ -40,30 +40,13 @@ export default function Navbar() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Subjects
+                Programming Language
               </Link>
               <ul
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <NavDrop />
-                {/* <li>
-                  <Link className="dropdown-item" to="#">
-                    classNamees
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="#">
-                    Labs
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="#">
-                    Videos
-                  </Link>
-                </li>
-              </ul>
-            </li> */}
               </ul>
             </li>
           </ul>
