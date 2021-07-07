@@ -10,11 +10,9 @@ export default class AddNew extends Component {
     language: "",
     link: "",
   };
-
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
-
   handleSubmit = async (event) => {
     event.preventDefault();
     const response = await axios.post(
@@ -29,7 +27,6 @@ export default class AddNew extends Component {
       link: "",
     });
   };
-
   handleKeyDown = (event) => {
     if (event.keyCode === 13) {
       this.setState({ [event.target.name]: event.target.value });
