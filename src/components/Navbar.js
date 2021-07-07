@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavDropdown from "./NavDropdown";
+import NavDrop from "./NavDrop";
 export default function Navbar() {
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
@@ -40,30 +40,13 @@ export default function Navbar() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Subjects
+                Programming Language
               </Link>
               <ul
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <NavDropdown />
-                {/* <li>
-                  <Link className="dropdown-item" to="#">
-                    classNamees
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="#">
-                    Labs
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="#">
-                    Videos
-                  </Link>
-                </li>
-              </ul>
-            </li> */}
+                <NavDrop />
               </ul>
             </li>
           </ul>
