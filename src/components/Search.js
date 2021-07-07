@@ -5,7 +5,7 @@ class Search extends Component {
     searchTerm: "",
     searchResults: [],
   };
-  componentDidUpdate = (prevProps, prevState) => {
+  componentDidUpdate = (prevState) => {
     if (prevState.searchTerm !== this.state.searchTerm) {
       this.handleSubmit();
     }
@@ -15,9 +15,22 @@ class Search extends Component {
   };
   handleSubmit = async (event) => {
     try {
-      const response = await axios.get(`${this.state.searchTerm}`);
+      const response = await axios.get(
+        `https://ironrest.herokuapp.com/labfunctions`
+      );
+      let newArray = response.data.filter((element) => {
+        return (
+          element.subjects
+            .join()
+            .toLowerCase()
+            .includes(this.state.searchTerm.toLowerCase()) ||
+          element.programming
+            .toLowerCase()
+            .includes(this.state.searchTerm.toLowerCase())
+        );
+      });
       console.log(response);
-      this.setState({ searchResults: [...response.data] });
+      this.setState({ searchResults: [...newArray] });
     } catch (err) {
       console.log(err);
     }
@@ -29,7 +42,7 @@ class Search extends Component {
           <input
             type="text"
             className="form-control"
-            placeholder="Digite o que você precisa"
+            placeholder="Search by subject..."
             onChange={this.handleChange}
             value={this.state.searchTerm}
           />
@@ -42,21 +55,35 @@ class Search extends Component {
           </button>
         </div>
         <ul className="list-group">
-          {this.state.searchResults.map((country) => {
+          {this.state.searchResults.map((program) => {
             return (
-              <li key={country.cioc} className="list-group-item">
+              <li key={program.cioc} className="list-group-item">
                 <div className="row">
-                  <div className="col-4">
+                  {/* <div className="col-4">
                     <img
-                      src={country.flag}
-                      alt={`Flag of ${country.name}`}
+                      src={progam.flag}
+                      alt={`Flag of ${progam.name}`}
                       className="img-fluid w-75 h-auto"
                     />
-                  </div>
+                  </div> */}
                   <div className="col-8 d-flex flex-column">
-                    <strong>{country.name}</strong>
-                    <span>Capital: {country.capital}</span>
-                    <span>Região: {country.region}</span>
+                    <strong>{program.name}</strong>
+                    <span>
+                      <strong>Program-Language: </strong>
+                      {program.programming}
+                    </span>
+                    <span>
+                      <strong>Link: </strong>
+                      <a target="blank" href=" ">
+                        {program.link}
+                      </a>
+                    </span>
+                    <span>
+                      <strong>Main Subjects: </strong>
+                      <span target="blank" href=" ">
+                        {program.subjects.join(", ")}
+                      </span>
+                    </span>
                   </div>
                 </div>
               </li>
