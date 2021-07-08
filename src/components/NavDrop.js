@@ -1,7 +1,8 @@
 import axios from "axios";
 import { Component } from "react";
-import { Dropdown } from "bootstrap";
 import { Link } from "react-router-dom";
+import { DropdownButton } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 class NavDrop extends Component {
   state = {
@@ -32,17 +33,15 @@ class NavDrop extends Component {
 
   render() {
     return (
-      <div>
+      <NavDropdown title="Programming Language" id="collasible-nav-dropdown">
         {this.state.programming.map((program) => {
           return (
-            <li>
-              <a className="dropdown-item" to={`/subject/` + program}>
-                <Link to={this.state.programming.program}>{program}</Link>
-              </a>
-            </li>
+            <NavDropdown.Item href={"/search/" + program}>
+              {program}
+            </NavDropdown.Item>
           );
         })}
-      </div>
+      </NavDropdown>
     );
   }
 }

@@ -1,12 +1,14 @@
 import ImgHome from "../img/My-Own-Help.png";
 import { Parallax } from "react-parallax";
-function Homepage() {
+import "../App.css";
+
+export default function Homepage() {
   return (
     <div>
       <Parallax bgImage={ImgHome}>
-        <div style={{ height: 600 }}>
+        <div className="background-color" style={{ height: 600 }}>
           <h1
-            className=" bg-image text-center shadow-1-strong rounded mb-5 text-white"
+            className="bg-image text-center shadow-1-strong rounded mb-5 text-white d-none d-sm-block"
             style={{
               fontSize: "100px",
               paddingTop: "13%",
@@ -16,11 +18,6 @@ function Homepage() {
           </h1>
         </div>
       </Parallax>
-      <Parallax>
-        <h1></h1>
-      </Parallax>
-      <Parallax></Parallax>
     </div>
   );
 }
-export default Homepage;

@@ -1,12 +1,21 @@
 import { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 class Search extends Component {
   state = {
+    id: "",
     searchTerm: "",
     searchResults: [],
   };
-  componentDidUpdate = (prevState) => {
+
+  componentDidMount = () => {
+    this.handleSubmit();
+  };
+
+  componentDidUpdate = (prevProps, prevState) => {
     if (prevState.searchTerm !== this.state.searchTerm) {
+      console.log(this.state.searchTerm);
       this.handleSubmit();
     }
   };
@@ -18,6 +27,7 @@ class Search extends Component {
       const response = await axios.get(
         `https://ironrest.herokuapp.com/labfunctions`
       );
+      console.log(response);
       let newArray = response.data.filter((element) => {
         return (
           element.subjects
@@ -38,7 +48,7 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <div className="input-group mb-3">
+        <div className="mb-3 mt-3" style={{ margin: " 0 3%" }}>
           <input
             type="text"
             className="form-control"
@@ -46,26 +56,12 @@ class Search extends Component {
             onChange={this.handleChange}
             value={this.state.searchTerm}
           />
-          <button
-            className="btn btn-primary"
-            type="button"
-            onClick={this.handleSubmit}
-          >
-            <i className="fas fa-search"></i>
-          </button>
         </div>
         <ul className="list-group">
           {this.state.searchResults.map((program) => {
             return (
               <li key={program.cioc} className="list-group-item">
                 <div className="row">
-                  {/* <div className="col-4">
-                    <img
-                      src={progam.flag}
-                      alt={`Flag of ${progam.name}`}
-                      className="img-fluid w-75 h-auto"
-                    />
-                  </div> */}
                   <div className="col-8 d-flex flex-column">
                     <strong>{program.name}</strong>
                     <span>
@@ -73,8 +69,12 @@ class Search extends Component {
                       {program.programming}
                     </span>
                     <span>
+                      <strong>Language: </strong>
+                      {program.language}
+                    </span>
+                    <span>
                       <strong>Link: </strong>
-                      <a target="blank" href=" ">
+                      <a target="blank" href={program.link}>
                         {program.link}
                       </a>
                     </span>
@@ -82,6 +82,27 @@ class Search extends Component {
                       <strong>Main Subjects: </strong>
                       <span target="blank" href=" ">
                         {program.subjects.join(", ")}
+                      </span>
+                      <br></br>
+                      <span>
+                        <a
+                          key={program._id}
+                          href={`/edit/${program._id}`}
+                          style={{ border: "none", margin: "none" }}
+                          className="text-dark"
+                        >
+                          <i class="fas fa-user-edit"></i>
+                        </a>
+                      </span>
+                      <span>
+                        <a
+                          key={program._id}
+                          href={`/delete/${program._id}`}
+                          style={{ border: "none", margin: "20px" }}
+                          className="text-dark"
+                        >
+                          <i className="fas fa-trash-alt"></i>
+                        </a>
                       </span>
                     </span>
                   </div>
