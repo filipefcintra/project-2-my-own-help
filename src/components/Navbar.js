@@ -1,57 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import NavDrop from "./NavDrop";
-export default function Navbar() {
+import { Navbar, Container, Nav } from "react-bootstrap";
+export default function NavBor() {
   return (
-    <nav className="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="./">
-          MyOwnHelp
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="./AddNew">
-                Add New
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="./Search">
-                Search
-              </Link>
-            </li>
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                to="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Programming Language
-              </Link>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <NavDrop />
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand href="/">MyOwnHelp</Navbar.Brand>
+        <Navbar collapseOnSelect>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/addnew">Add New</Nav.Link>
+              <Nav.Link href="/search">Search</Nav.Link>
+              <NavDrop />
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </Container>
+    </Navbar>
   );
 }
