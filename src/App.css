@@ -1,5 +1,24 @@
-/* .bg-image {
-    background: url("./Imagens/My-Own-Help.png");
-
+.background-color h1 {
+    background: -webkit-linear-gradient( left,  #077CB0 15%, #054B6A 30%, #ffff 60%, #000000 80%, #0d384b 100%) repeat;
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  -moz-background-clip: text;
+    background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent; 
+  animation-name: masked-animation; 
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
- */
+
+@keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -8000px -3000px;
+  }
+}

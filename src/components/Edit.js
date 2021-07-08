@@ -1,13 +1,24 @@
 import React, { Component } from "react";
 import axios from "axios";
-import TextInput from "./TextInput";
-export default class AddNew extends Component {
+import TextInputEdit from "./TextInputEdit";
+export default class Edit extends Component {
   state = {
     name: "",
     programming: "",
     subjects: [],
     language: "",
     link: "",
+  };
+  componentDidMount = async () => {
+    try {
+      const id = this.props.match.params._id;
+      const response = await axios.get(
+        `https://ironrest.herokuapp.com/labfunctions/${id}`
+      );
+      this.setState({ ...response.data });
+    } catch (err) {
+      console.log(err);
+    }
   };
   handleChange = (event) => {
     if (event.target.name === "subjects") {
@@ -17,11 +28,9 @@ export default class AddNew extends Component {
     }
   };
   handleSubmit = async (event) => {
+    const id = this.props.match.params._id;
     event.preventDefault();
-     await axios.post(
-      "https://ironrest.herokuapp.com/labfunctions",
-      this.state
-    );
+    axios.put(`https://ironrest.herokuapp.com/labfunctions/${id}`, this.state);
     this.setState({
       name: "",
       programming: "",
@@ -36,38 +45,37 @@ export default class AddNew extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <TextInput
-          label="File Name"
+        <TextInputEdit
+          label="Edit File Name"
           placeholder="Type the file name..."
           type="text"
           name="name"
           value={this.state.name}
           onChange={this.handleChange}
         />
-        <TextInput
-          label="Programming Language"
+        <TextInputEdit
+          label="Edit Programming Language"
           placeholder="e.g. Java"
           type="text"
           name="programming"
           value={this.state.programming}
           onChange={this.handleChange}
         />
-        <TextInput
-          label="Url"
+        <TextInputEdit
+          label="Edit Url"
           placeholder="Type the file path..."
           type="text"
           name="link"
           value={this.state.link}
           onChange={this.handleChange}
         />
-        <TextInput
-          label="Main Subjects"
+        <TextInputEdit
+          label="Edit Main Subjects"
           placeholder="Type the subjects separate by commas, e.g., arrow functions, while, axios"
           type="text"
           name="subjects"
           value={this.state.subjects}
           onChange={this.handleChange}
-          required
         />
         <br></br>
         <div className="form-floating">
@@ -78,10 +86,9 @@ export default class AddNew extends Component {
             value={this.state.language}
             onChange={this.handleChange}
             name="language"
-            required
           >
             <option selected value="">
-              Language
+              Edit Language
             </option>
             <option value="portuguese">Portuguese</option>
             <option value="english">English</option>
@@ -98,7 +105,12 @@ export default class AddNew extends Component {
           </select>
           <label for="floatingSelect">Select Language</label>
         </div>
-        <button className="mt-5 btn btn-primary">Submit</button>
+        <div>
+          <button type="submit" className="mt-4 btn btn-primary">
+            Save
+          </button>
+        </div>
+        <div></div>
       </form>
     );
   }
