@@ -3,7 +3,7 @@ import NavDrop from "./NavDrop";
 import { Navbar, Container, Nav } from "react-bootstrap";
 export default function NavBor() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar className="navbar sticky-top" bg="dark" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand href="/">MyOwnHelp</Navbar.Brand>
         <Navbar collapseOnSelect>

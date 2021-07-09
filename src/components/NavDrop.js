@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import { NavDropdown } from "react-bootstrap";
-class NavDrop extends Component {
+export default class NavDrop extends Component {
   state = {
     programming: [],
   };
@@ -30,16 +30,12 @@ class NavDrop extends Component {
       <NavDropdown title="Programming Language" id="collasible-nav-dropdown">
         {this.state.programming.map((program) => {
           return (
-            <NavDropdown.Item
-              href={`/search/${program}`}
-            >
+            <NavDropdown.Item key={program} href={"/search/" + program}>
               {program}
             </NavDropdown.Item>
           );
         })}
-        
       </NavDropdown>
     );
   }
 }
-export default NavDrop;

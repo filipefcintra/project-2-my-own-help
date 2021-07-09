@@ -18,10 +18,7 @@ export default class AddNew extends Component {
   };
   handleSubmit = async (event) => {
     event.preventDefault();
-     await axios.post(
-      "https://ironrest.herokuapp.com/labfunctions",
-      this.state
-    );
+    await axios.post("https://ironrest.herokuapp.com/labfunctions", this.state);
     this.setState({
       name: "",
       programming: "",
@@ -72,7 +69,7 @@ export default class AddNew extends Component {
         <br></br>
         <div className="form-floating">
           <select
-            class="form-select"
+            className="form-select"
             id="floatingSelect"
             aria-label="Floating label select example"
             value={this.state.language}
@@ -80,7 +77,7 @@ export default class AddNew extends Component {
             name="language"
             required
           >
-            <option selected value="">
+            <option value="" defaultValue="">
               Language
             </option>
             <option value="portuguese">Portuguese</option>
@@ -96,7 +93,7 @@ export default class AddNew extends Component {
             <option value="polish">Polish</option>
             <option value="german">German</option>
           </select>
-          <label for="floatingSelect">Select Language</label>
+          <label htmlFor="floatingSelect">Select Language</label>
         </div>
         <button className="mt-5 btn btn-primary">Submit</button>
       </form>

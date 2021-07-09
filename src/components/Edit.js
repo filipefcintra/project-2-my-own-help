@@ -15,7 +15,8 @@ export default class Edit extends Component {
       const response = await axios.get(
         `https://ironrest.herokuapp.com/labfunctions/${id}`
       );
-      this.setState({ ...response.data });
+      const { _id, ...data } = response.data;
+      this.setState({ ...data });
     } catch (err) {
       console.log(err);
     }
