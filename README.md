@@ -11,6 +11,8 @@ https://github.com/filipefcintra/project-2-my-own-help
 
 ### slides
 
+https://docs.google.com/presentation/d/1JMyeixqx6bvuaTUONCLfbFfIXwjveKeMrgQXa9NXvr4/edit?usp=sharing
+
 
 
 
