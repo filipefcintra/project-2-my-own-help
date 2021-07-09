@@ -8,7 +8,7 @@ export default function Homepage() {
   return (
     <div>
       <Parallax strength={100} bgImage={ImgHome}>
-        <div className="background-color" style={{ height: 600 }}>
+        <div className="background-color" style={{ height: 800 }}>
           <h1
             className="bg-image text-center shadow-1-strong rounded mb-5 text-white d-none d-sm-block"
             style={{
