@@ -8,6 +8,7 @@ https://github.com/filipefcintra/project-2-my-own-help
 
 ### live app on the Internet
 
+https://myownhelp.netlify.app/
 
 ### slides
 
