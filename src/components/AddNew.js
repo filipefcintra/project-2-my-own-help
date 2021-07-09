@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+
 import TextInput from "./TextInput";
 
 export default class AddNew extends Component {
@@ -19,10 +20,7 @@ export default class AddNew extends Component {
   };
   handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await axios.post(
-      "https://ironrest.herokuapp.com/labfunctions",
-      this.state
-    );
+    await axios.post("https://ironrest.herokuapp.com/labfunctions", this.state);
     this.setState({
       name: "",
       programming: "",
@@ -34,7 +32,6 @@ export default class AddNew extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="container">
-        <br></br>
         <br></br>
         <br></br>
         <TextInput
@@ -73,7 +70,7 @@ export default class AddNew extends Component {
         <br></br>
         <div className="form-floating">
           <select
-            class="form-select"
+            className="form-select"
             id="floatingSelect"
             aria-label="Floating label select example"
             value={this.state.language}
@@ -81,7 +78,7 @@ export default class AddNew extends Component {
             name="language"
             required
           >
-            <option selected value="">
+            <option value="" defaultValue="">
               Language
             </option>
             <option value="portuguese">Portuguese</option>
@@ -97,7 +94,7 @@ export default class AddNew extends Component {
             <option value="polish">Polish</option>
             <option value="german">German</option>
           </select>
-          <label for="floatingSelect">Select Language</label>
+          <label htmlFor="floatingSelect">Select Language</label>
         </div>
         <button className="mt-5 btn btn-primary">Submit</button>
       </form>
