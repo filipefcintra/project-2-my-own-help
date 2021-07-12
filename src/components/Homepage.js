@@ -1,8 +1,5 @@
 import ImgHome from "../img/My-Own-Help.png";
-import imgSearch from "../img/My-Own-Search.png";
 import { Parallax } from "react-parallax";
-import imgFilipe from "../img/filipe.png";
-import imgRafael from "../img/rafael.png";
 import "../App.css";
 export default function Homepage() {
   return (
